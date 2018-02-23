@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        scout\Providers\AppServiceProvider::class,
+        scout\Providers\AuthServiceProvider::class,
+        // scout\Providers\BroadcastServiceProvider::class,
+        scout\Providers\EventServiceProvider::class,
+        scout\Providers\RouteServiceProvider::class,
 
     ],
 
@@ -208,6 +208,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Custom aliases
+         */
+        
 
     ],
 
