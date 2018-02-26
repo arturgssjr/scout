@@ -17,3 +17,5 @@ Route::group(['prefix' => '', 'as' => 'home', 'middleware' => 'auth'], function 
     Route::get('/', 'HomeController@index');
     Route::get('/home', 'HomeController@index');
 });
+
+Route::resource('user', 'UsersController');
