@@ -10,21 +10,27 @@
 <table class="table table-condensed">
     <thead>
         <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Opções</th>
+            <th class="text-center">#</th>
+            <th class="text-center">Nome</th>
+            <th class="text-center">E-mail</th>
+            <th class="text-center">Opções</th>
         </tr>
     </thead>
     @foreach ($users as $user)
         <tbody>
             <tr>
-                <th>{{ $user->id }}</th>
+                <th class="text-center">{{ $user->id }}</th>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
-                <td>
-                    <a href="#" class="btn btn-outline-warning">
+                <td class="text-center">
+                    <a href="#" class="btn btn-sm btn-info" data-toggle="tooltip" data-placement="top" title="Visualizar usuário">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-warning" data-toggle="tooltip" data-placement="top" title="Alterar usuário">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Excluir usuário">
+                        <i class="fa fa-times" aria-hidden="true"></i>
                     </a>
                 </td>
             </tr>
@@ -32,11 +38,11 @@
     @endforeach
     <tfoot>
         <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Opções</th>            
+            <th class="text-center">#</th>
+            <th class="text-center">Nome</th>
+            <th class="text-center">E-mail</th>
+            <th class="text-center">Opções</th>            
         </tr>
     </tfoot>
 </table>
-@stop 
+@endsection 
